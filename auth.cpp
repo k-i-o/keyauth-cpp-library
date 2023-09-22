@@ -145,6 +145,7 @@ void KeyAuth::api::init()
         }
         else
         {
+            MessageBoxA(0, XorStr("A new version of the program has been released, replace this exe file!").c_str(), XorStr("Update needed").c_str(), MB_ICONINFORMATION);
             ShellExecuteA(0, XorStr("open").c_str(), dl.c_str(), 0, 0, SW_SHOWNORMAL);
         }
         exit(0);
